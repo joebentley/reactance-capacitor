@@ -21,3 +21,8 @@ a:hover {
 .center {
   text-align: center;
 }
+
+#box {
+  width: 600px;
+  margin: 4em auto;
+}

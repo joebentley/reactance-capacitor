@@ -5,5 +5,5 @@ MathJax.Hub.Queue(function () {
   // Unhide diagram
   $('#hidden').css('visibility', '')
 
-  lib.runApp()
+  lib.runApp('box')
 })

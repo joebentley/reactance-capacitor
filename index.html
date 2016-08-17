@@ -18,11 +18,19 @@
 
   <body>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" href="bower_components/jsxgraph/distrib/jsxgraphcore.js"></script>
+    <script type="text/javascript" src="bower_components/jsxgraph/distrib/jsxgraphcore.js"></script>
 
     <h1>Reactance for Capacitor</h1>
 
     <div id="hidden" style="visibility: hidden;">
+      <p>This app shows a graph of the reactance of a capacitor against the capacitance.
+      The reactance is given by,</p>
+
+      \[X_C = \frac{1}{2\pi f C}\]
+
+      <p>where \(f\) is the frequency (in \(Hz\)), and \(C\) is the capacitance (in Farads).
+      Note the asymptotic behaviour of the reactance as the capacitance goes to zero.</p>
+
       <div id="box" class="jxgbox" style="width:600px; height:600px;"></div>
     </div>
 
