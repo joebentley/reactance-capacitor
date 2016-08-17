@@ -18,5 +18,23 @@ var lib = {}
         return 1 / (2 * Math.PI * frequency.Value() * C)
       }
     ])
+
+    board.create('axis', [[0, 0], [1, 0]], {
+      name: 'C',
+      withLabel: true,
+      label: {
+        position: 'rt',  // possible values are 'lft', 'rt', 'top', 'bot'
+        offset: [-15, 20]   // (in pixels)
+      }
+    })
+
+    board.create('axis', [[0, 0], [0, 1]], {
+      name: 'X_C',
+      withLabel: true,
+      label: {
+        position: 'rt',  // possible values are 'lft', 'rt', 'top', 'bot'
+        offset: [-30, 0]   // (in pixels)
+      }
+    })
   }
 })(lib)
