@@ -1,0 +1,15 @@
+{
+  "name": "jsxgraph",
+  "homepage": "https://github.com/jsxgraph/jsxgraph",
+  "version": "0.99.5",
+  "_release": "0.99.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.99.5",
+    "commit": "624d79051f930bf9faef0256c3e05c94088d544c"
+  },
+  "_source": "https://github.com/jsxgraph/jsxgraph.git",
+  "_target": "^0.99.5",
+  "_originalSource": "jsxgraph",
+  "_direct": true
+}

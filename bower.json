@@ -1,0 +1,17 @@
+{
+  "name": "reactance-capacitor",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Joe Bentley <joebentley10@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/joebentley/reactance-capacitor",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
