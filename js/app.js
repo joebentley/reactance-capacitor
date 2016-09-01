@@ -5,5 +5,6 @@ MathJax.Hub.Queue(function () {
   // Unhide diagram
   $('#hidden').css('visibility', '')
 
-  lib.runApp('box')
+  // lib.drawReactanceVsCapacitance('box')
+  lib.drawReactanceVsFrequency('box')
 })

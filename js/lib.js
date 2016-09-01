@@ -3,7 +3,7 @@
 var lib = {}
 
 ;(function (ns) {
-  ns.runApp = function (graphElemID) {
+  ns.drawReactanceVsCapacitance = function (graphElemID) {
     var board = JXG.JSXGraph.initBoard(graphElemID, {
       boundingbox: [-0.5, 10, 10, -0.5],
       keepaspectratio: false,
@@ -23,6 +23,43 @@ var lib = {}
 
     board.create('axis', [[0, 0], [1, 0]], {
       name: 'C',
+      withLabel: true,
+      label: {
+        position: 'rt',  // possible values are 'lft', 'rt', 'top', 'bot'
+        offset: [-15, 20]   // (in pixels)
+      }
+    })
+
+    board.create('axis', [[0, 0], [0, 1]], {
+      name: 'X_C',
+      withLabel: true,
+      label: {
+        position: 'rt',  // possible values are 'lft', 'rt', 'top', 'bot'
+        offset: [30, 0]   // (in pixels)
+      }
+    })
+  }
+
+  ns.drawReactanceVsFrequency = function (graphElemID) {
+    var board = JXG.JSXGraph.initBoard(graphElemID, {
+      boundingbox: [-0.5, 10, 10, -0.5],
+      keepaspectratio: false,
+      showCopyright: false
+    })
+
+    var capacitance = board.create('slider', [[3, 1], [6, 1], [0.01, 1, 5]],
+      { name: 'capacitance in Farads' })
+
+    board.create('functiongraph', [
+      function (f) {
+        if (f > 0) {
+          return 1 / (2 * Math.PI * capacitance.Value() * f)
+        }
+      }
+    ])
+
+    board.create('axis', [[0, 0], [1, 0]], {
+      name: 'f',
       withLabel: true,
       label: {
         position: 'rt',  // possible values are 'lft', 'rt', 'top', 'bot'
